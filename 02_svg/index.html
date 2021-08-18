@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style type="text/css">
+  .container-panda {
+    width: 400px;
+    height: 300px;
+    background-color: #e5e5e5;
+  }
+
+  .container-coffee {
+    background-color: #FFF6ED;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  .coffee-item {
+    max-width: 250px;
+  }
+
+  .coffee-item svg {
+    max-width: 200px;
+  }
+
+  .coffee-item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .text-50 {
+    width: 40%;
+  }
+
+  span {
+    color: orange;
+  }
+
+  .content {
+    display: flex;
+  }
+
+  .bla-50 {
+    background-image: url("img/Frame.svg");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: left top;
+    width: 60%;
+  }
+  .bla-50 svg {
+    max-width: 350px;
+    padding-left: 150px;
+  }
+</style>
+
+<body>
+  <!-- х и у отвечают за смещение
+  stroke - обводка
+stroke-width - толщина обводки
+polygon - треугольник
+circle - круг
+-->
+  <div class="container-panda">
+    <svg xmlns="http://www.w3.org/2000/svg" width="400" height="300">
+      <g>
+        <ellipse rx="37" ry="50" cx="77" cy="3" fill="#4a4a4a" style="transform:rotate(43deg);"></ellipse>
+        <ellipse rx="12" ry="20" cx="73" cy="3" style="transform: rotate(43deg);"></ellipse>
+        <ellipse rx="37" ry="50" cx="148" cy="223" fill="#4a4a4a" style="transform: rotate(315deg);"></ellipse>
+        <ellipse rx="12" ry="20" cx="150" cy="223" style="transform: rotate(315deg);"></ellipse>
+        <circle r="140" cx="158" cy="150" fill="#fff"></circle>
+        <ellipse rx="30" ry="37" cx="210" cy="140" fill="#4a4a4a" style="transform:rotate(0deg);"></ellipse>
+        <ellipse rx="30" ry="37" cx="100" cy="140" fill="#4a4a4a" style="transform:rotate(0deg);"></ellipse>
+        <circle r="15" cx="210" cy="135" fill="#black"></circle>
+        <circle r="15" cx="100" cy="135" fill="#black"></circle>
+      </g>
+      <circle r="7" cx="206" cy="128" fill="#fff"></circle>
+      <circle r="7" cx="96" cy="128" fill="#fff"></circle>
+      <ellipse rx="20" ry="15" cx="155" cy="190"></ellipse>
+    </svg>
+  </div>
+  <div class="coffee container-coffee">
+    <h1>
+      Как это работает?
+    </h1>
+    <ul class="coffee-list">
+      <li class="coffee-item">
+        <svg viewbox="0 0 375 288">
+          <use xlink:href="img/1.svg#coffee"></use>
+        </svg>
+        <h2>Утренний <span>кофе</span> </h2>
+        <p>Кофеин воздействует на центральную нервную систему как природный “будильник”. Поэтому мы быстрее просыпаемся.
+        </p>
+      </li>
+      <li class="coffee-item">
+        <svg viewbox="0 0 375 288">
+          <use xlink:href="img/1.svg#meditate"></use>
+        </svg>
+        <h2>Час <span>медитации</span> </h2>
+        <p>После практик оба полушария мозга начинают работать сбалансированно — это привносит порядок в вашу жизнь.</p>
+      </li>
+      <li class="coffee-item">
+        <svg viewbox="0 0 375 288">
+          <use xlink:href="img/1.svg#run"></use>
+        </svg>
+        <h2>Вперёд к <span>свершениям!</span> </h2>
+        <p>Ресурсы каждого человека ограничены, поэтому нам необходимо беречь себя и вовремя останавливаться.</p>
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="text-50">
+      <h2>
+        Интеграция со сторонними сервисами
+      </h2>
+      <p>Поможет всегда оставаться в курсе всех событий, быть максимально эффективным на протяжении всего рабочего дня,
+        контролировать свои задачи и не опоздать на запланированные встречи.</p>
+    </div>
+    <div class="bla-50">
+      <svg viewbox="0 0 375 288">
+        <use xlink:href="img/Group.svg#idone"></use>
+      </svg>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+.about {
+    padding-top: 34px;
+    background-color: #202020;
+}
+
+.about-title {
+    margin-bottom: 6px;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.about-text {
+    margin-bottom: 21px;
+    font-size: 14px;
+    line-height: 25px;
+    font-family: 'Roboto';
+    color: #CACACA;
+}
+
+.about-block__image {
+    background-image: url('/img/camera.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about img {
+    margin-bottom: 24px;
+}
+
+.about-paragraph {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.about__input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 24px;
+    background-color: #4A4A4A;
+    border: none;
+    color: #FFFFFF;
+}
+
+@media(min-width:768px) {
+    .about-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0.1fr 0.1fr;
+        gap: 0px 30px;
+        grid-template-areas: "left top" "left center" "left bottom";
+    }
+    .about-text {
+        font-size: 16px;
+        margin-bottom: 0;
+        grid-area: left;
+    }
+    .about img {
+        grid-area: top;
+    }
+    .about-paragraph {
+        margin-bottom: 0;
+        align-self: center;
+        grid-area: center;
+        font-size: 24px;
+    }
+    .about__form {
+        grid-area: bottom;
+    }
+    .about-block__image {
+        background-image: url('/img/camerabig.jpg');
+        background-size: cover;
+    }
+}
+
+@media(min-width:1024px) {
+    .about-block__image {
+        margin-bottom: 16px;
+        background-image: url('/img/camera.jpg');
+        background-size: cover;
+    }
+    .about-paragraph {
+        margin-bottom: 16px;
+    }
+    .about__form {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .about__input {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .about-text {
+        line-height: 28px;
+    }
+    .about__input {
+        margin-bottom: 0;
+        margin-right: auto;
+        height: 100%;
+    }
+    .about__form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: start;
+        align-items: center;
+        flex-direction: row;
+    }
+}

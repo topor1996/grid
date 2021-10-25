@@ -1,0 +1,21 @@
+.btn {
+    padding: 9px 18px;
+    font-size: 14px;
+    border: none;
+    background-color: #FF6E30;
+    font-family: 'Roboto';
+    color: #FFFFFF;
+}
+
+.btn-about {
+    background-color: transparent;
+    border: 3px solid #FF6E30;
+}
+
+@media (min-width: 768px) {
+    .btn {
+        width: inherit;
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+}

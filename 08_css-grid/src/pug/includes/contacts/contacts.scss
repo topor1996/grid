@@ -1,0 +1,241 @@
+.contacts {
+    padding-top: 0;
+}
+
+.contacts-title {
+    padding: 0 22px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: #202020;
+}
+
+.block-maps {
+    width: 100%;
+    height: 436px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0fr;
+    gap: 0px 0px;
+    grid-template-areas: "map" "info";
+}
+
+#map {
+    width: 100%;
+    height: 436px;
+}
+
+.map {
+    position: absolute;
+    grid-area: map;
+}
+
+.maps-info {
+    display: grid;
+    padding: 16px;
+    grid-area: info;
+    position: relative;
+    background: rgba(32, 32, 32, 0.85);
+}
+
+[class*=ground-pane] {
+    filter: grayscale(1);
+}
+
+.maps-title {
+    position: relative;
+    margin-bottom: 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.maps-title::after {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/cross.svg');
+    background-color: #666666;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: initial;
+}
+
+.maps-span {
+    margin-bottom: 12px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #CACACA;
+}
+
+.tooltip__phone {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    color: #FF6E30;
+}
+
+.tooltip__phone svg {
+    margin-right: 4px;
+    fill: #FF6E30;
+}
+
+.application__submit {
+    display: grid;
+}
+
+.application-title {
+    margin-bottom: 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #202020;
+}
+
+.application-text {
+    margin-bottom: 16px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #999999;
+}
+
+.application__label {
+    position: absolute;
+    visibility: hidden;
+}
+
+.application__input {
+    margin-bottom: 20px;
+    padding: 12px 24px;
+    border: none;
+    background-color: #E9E9E9;
+}
+
+.application__textarea {
+    margin-bottom: 20px;
+    min-height: 150px;
+    padding: 12px 24px;
+    border: none;
+    background-color: #E9E9E9;
+}
+
+.application-btn {
+    width: fit-content;
+}
+
+@media(min-width:768px) {
+    .maps-title {
+        font-size: 24px;
+    }
+    .maps-span {
+        width: 56%;
+        font-size: 16px;
+    }
+    .application__submit {
+        width: 60%
+    }
+    .application-title {
+        font-size: 24px;
+    }
+    .application-text {
+        font-size: 16px;
+    }
+}
+
+@media(min-width:1024px) {
+    .contacts-block {
+        padding: 22px;
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 64% 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 30px;
+        grid-template-areas: "maps form";
+    }
+    .block-maps {
+        grid-area: maps;
+    }
+    #map {
+        width: 62%;
+    }
+    .application {
+        padding: 0 !important;
+        height: 436px;
+        grid-area: form;
+    }
+    .application__submit {
+        width: 100%;
+        height: 100%;
+    }
+    .application__textarea {
+        min-height: 132px;
+    }
+}
+
+@media(min-width:1280px) {
+    .contacts-title {
+        padding: 22px 100px;
+    }
+    .contacts-block {
+        padding: 22px 100px;
+    }
+    #map {
+        width: 55%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .contacts-title {
+        padding: 22px 74px;
+    }
+    .contacts-block {
+        padding: 22px 74px;
+    }
+    // #map {
+    //     width: 46%;
+    // }
+    .maps-info {
+        padding: 40px;
+        height: inherit;
+        width: 50%;
+        display: grid;
+        align-content: center;
+    }
+    .maps-title::after {
+        right: -25px;
+        top: -117px;
+    }
+}
+
+@media (min-width: 1768px) {
+    .contacts-title {
+        padding: 22px 244px;
+    }
+    .contacts-block {
+        padding: 22px 244px;
+    }
+    #map {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .contacts-title,
+    .contacts-block {
+        padding: 22px 315px;
+    }
+    #map {
+        width: 40%;
+    }
+}

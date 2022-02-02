@@ -29,6 +29,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-document.querySelector('.button-close').addEventListener('click', function() {
-    document.querySelector('.maps-info').classList.remove('maps-info__active')
+$(function() {
+    $('.button-close').click(function() {
+        $('.maps-info').toggleClass('maps-info__active');
+    });
+});
+
+// document.querySelector('.button-close').addEventListener('click', function() {
+//     document.querySelector('.maps-info').classList.remove('maps-info__active')
+// });
+
+
+$(function() {
+    $('.button-close').click(function() {
+        $(this).toggleClass('button-close-active');
+    });
 });

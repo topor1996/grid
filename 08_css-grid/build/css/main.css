@@ -165,11 +165,17 @@ textarea {
   background-color: #FF6E30;
   font-family: 'Roboto';
   color: #FFFFFF;
+  -webkit-transition: all .16s ease-in-out;
+  -o-transition: all .16s ease-in-out;
+  transition: all .16s ease-in-out;
 }
 
 .btn-about {
   background-color: transparent;
   border: 3px solid #FF6E30;
+  -webkit-transition: all .16s ease-in-out;
+  -o-transition: all .16s ease-in-out;
+  transition: all .16s ease-in-out;
 }
 
 .btn-yellow:hover {
@@ -199,7 +205,7 @@ textarea {
 
 @media (min-width: 768px) {
   .btn {
-    width: inherit;
+    width: auto;
     padding: 15px 20px;
     font-size: 16px;
   }
@@ -221,11 +227,16 @@ textarea {
 }
 
 .header-top-search {
+  display: block;
   width: 24px;
   background-image: url("../img/loop.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.header-more-social {
+  display: none;
 }
 
 .header-bottom {
@@ -287,6 +298,13 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding-left: 24px;
+  padding-bottom: 16px;
+  background-color: #4A4A4A;
+  opacity: 0.9;
 }
 
 .header-bottom-more__item {
@@ -301,6 +319,12 @@ textarea {
   margin-top: 24px;
 }
 
+.header-bottom-more__item a {
+  -webkit-transition: all .16s ease-in-out;
+  -o-transition: all .16s ease-in-out;
+  transition: all .16s ease-in-out;
+}
+
 .header-bottom-more__item:hover a {
   color: #FF6E30;
 }
@@ -312,6 +336,11 @@ textarea {
 
 .header-bottom-more__item:active a {
   color: #CE4307;
+}
+
+.header-top__nagigation {
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 @media (min-width: 768px) {
@@ -339,10 +368,24 @@ textarea {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 70%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .header-top__nagigation {
+    width: 64%;
+  }
+  .header-top-search {
+    display: none;
+  }
+  .header-more-social {
+    display: block;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 20px;
+    grid-template-areas: "inst fb vk";
   }
   .header-bottom {
     display: none;
@@ -534,7 +577,7 @@ textarea {
 }
 
 .about-block__image {
-  background-image: url("/img/camera.jpg");
+  background-image: url("/img/about__camera_320.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -592,7 +635,7 @@ textarea {
     grid-area: bottom;
   }
   .about-block__image {
-    background-image: url("/img/camerabig.jpg");
+    background-image: url("/img/about__camera_1024.webp");
     background-size: cover;
   }
 }
@@ -600,7 +643,7 @@ textarea {
 @media (min-width: 1024px) {
   .about-block__image {
     margin-bottom: 16px;
-    background-image: url("/img/camera.jpg");
+    background-image: url("/img/about__camera.webp");
     background-size: cover;
   }
   .about-paragraph {
@@ -633,6 +676,7 @@ textarea {
     height: 100%;
   }
   .about__form {
+    max-height: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -684,6 +728,12 @@ textarea {
 
 .projects-paragraph {
   margin-bottom: 10px;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 
 .razbor {
@@ -743,6 +793,12 @@ textarea {
   font-family: 'Roboto';
   color: #FFFFFF;
   font-size: 14px;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 
 .projects-date {
@@ -799,6 +855,13 @@ textarea {
 .predmet__image-1024,
 .predmet__text-1024 {
   display: none;
+}
+
+.predmet__text {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -958,6 +1021,7 @@ textarea {
   grid-template-rows: 1fr 0fr;
   gap: 0px 0px;
   grid-template-areas: "map" "info";
+  overflow: hidden;
 }
 
 #map {
@@ -970,8 +1034,18 @@ textarea {
   grid-area: map;
 }
 
+.maps-info {
+  display: grid;
+  top: 66%;
+  padding: 16px;
+  grid-area: info;
+  position: relative;
+  background: rgba(32, 32, 32, 0.85);
+}
+
 .maps-info__active {
   display: grid;
+  top: 0;
   padding: 16px;
   grid-area: info;
   position: relative;
@@ -1012,6 +1086,15 @@ textarea {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: initial;
+  -webkit-transition: all .16s ease-in-out;
+  -o-transition: all .16s ease-in-out;
+  transition: all .16s ease-in-out;
+}
+
+.button-close-active {
+  width: 50px;
+  background-color: transparent;
+  background-image: url("../img/up.svg");
 }
 
 .button-close:hover {
@@ -1085,6 +1168,9 @@ textarea {
   padding: 12px 24px;
   border: 3px solid transparent;
   background-color: #E9E9E9;
+  -webkit-transition: all .16s ease-in-out;
+  -o-transition: all .16s ease-in-out;
+  transition: all .16s ease-in-out;
 }
 
 .application__input:hover,
@@ -1111,6 +1197,16 @@ textarea {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.contacts__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -1181,12 +1277,23 @@ textarea {
     padding: 22px 74px;
   }
   .maps-info {
-    padding: 40px;
+    top: 0;
+    left: -41%;
+    padding: 20px;
     height: inherit;
     width: 50%;
     display: grid;
     -ms-flex-line-pack: center;
         align-content: center;
+  }
+  .maps-info__active {
+    padding: 40px;
+    left: 0;
+  }
+  .button-close-active {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   .maps-title::after {
     right: -25px;
@@ -1338,38 +1445,65 @@ footer {
 
 .inst:hover .inst-svg path {
   fill: #FF6E30;
+  -webkit-transition: all .16s ease-in-out;
+  -o-transition: all .16s ease-in-out;
+  transition: all .16s ease-in-out;
 }
 
 .fab:hover .fab-svg path {
   fill: #FF6E30;
+  -webkit-transition: all .16s ease-in-out;
+  -o-transition: all .16s ease-in-out;
+  transition: all .16s ease-in-out;
 }
 
 .vk:hover .vk-svg path {
   fill: #FF6E30;
+  -webkit-transition: all .16s ease-in-out;
+  -o-transition: all .16s ease-in-out;
+  transition: all .16s ease-in-out;
 }
 
 .inst:focus .inst-svg path {
   fill: #BC572B;
+  -webkit-transition: all .16s ease-in-out;
+  -o-transition: all .16s ease-in-out;
+  transition: all .16s ease-in-out;
 }
 
 .fab:focus .fab-svg path {
   fill: #BC572B;
+  -webkit-transition: all .16s ease-in-out;
+  -o-transition: all .16s ease-in-out;
+  transition: all .16s ease-in-out;
 }
 
 .vk:focus .vk-svg path {
   fill: #BC572B;
+  -webkit-transition: all .16s ease-in-out;
+  -o-transition: all .16s ease-in-out;
+  transition: all .16s ease-in-out;
 }
 
 .inst:active .inst-svg path {
   fill: #CE4307;
+  -webkit-transition: all .16s ease-in-out;
+  -o-transition: all .16s ease-in-out;
+  transition: all .16s ease-in-out;
 }
 
 .fab:active .fab-svg path {
   fill: #CE4307;
+  -webkit-transition: all .16s ease-in-out;
+  -o-transition: all .16s ease-in-out;
+  transition: all .16s ease-in-out;
 }
 
 .vk:active .vk-svg path {
   fill: #CE4307;
+  -webkit-transition: all .16s ease-in-out;
+  -o-transition: all .16s ease-in-out;
+  transition: all .16s ease-in-out;
 }
 
 .footer-container {

@@ -600,6 +600,7 @@ textarea {
   padding: 12px 24px;
   background-color: #4A4A4A;
   border: 3px solid transparent;
+  outline: none;
   color: #FFFFFF;
 }
 
@@ -888,6 +889,10 @@ textarea {
     max-width: 300px;
     grid-area: top2;
   }
+  .portret img {
+    -o-object-fit: none;
+       object-fit: none;
+  }
   .predmet {
     max-width: 300px;
     grid-area: top3;
@@ -903,8 +908,15 @@ textarea {
     min-height: 300px;
     grid-area: bottom;
   }
+  .zabvenie-span {
+    font-size: 14px;
+  }
   .portret__woman {
     grid-area: bottom-right;
+  }
+  .portret__woman img {
+    -o-object-fit: none;
+       object-fit: none;
   }
   .retush {
     grid-area: bottom-left;
@@ -979,7 +991,7 @@ textarea {
     display: none;
   }
   .projects-paragraph {
-    height: 64px;
+    height: 63px;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     display: -webkit-box;
@@ -1167,6 +1179,7 @@ textarea {
   margin-bottom: 20px;
   padding: 12px 24px;
   border: 3px solid transparent;
+  outline: none;
   background-color: #E9E9E9;
   -webkit-transition: all .16s ease-in-out;
   -o-transition: all .16s ease-in-out;
@@ -1184,6 +1197,7 @@ textarea {
   min-height: 150px;
   padding: 12px 24px;
   border: 3px solid transparent;
+  outline: none;
   background-color: #E9E9E9;
 }
 
@@ -1633,6 +1647,9 @@ footer {
 @media (min-width: 1440px) {
   .footer-container {
     padding: 22px 74px;
+  }
+  .footer-container .more {
+    width: 64%;
   }
 }
 
